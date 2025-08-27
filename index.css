@@ -1,0 +1,285 @@
+/* Base Reset & Global Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #000;
+  background-color: #fff;
+}
+
+:root {
+  --spacing: 1.5rem;
+  --spacing-half: 1rem;
+  --spacing-quarter: 0.7rem;
+  --spacing-small: 0.4rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: var(--spacing-half);
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: var(--spacing-quarter);
+}
+
+p {
+  line-height: 1.5;
+}
+p:not(:last-child) {
+  margin-bottom: var(--spacing-quarter);
+}
+p.justify {
+  -webkit-hyphens: auto;
+          hyphens: auto;
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  text-align: justify;
+}
+
+section {
+  margin-bottom: var(--spacing-half);
+}
+
+ul {
+  list-style: square outside;
+  margin-left: 1rem;
+}
+ul:not(:last-child) {
+  padding-bottom: var(--spacing-quarter);
+}
+ul li {
+  color: #222;
+}
+ul li a {
+  color: #0066ff;
+}
+
+/* Resume Layout */
+.noman {
+  display: block;
+  width: 25cm;
+  margin: 1rem auto;
+  background-color: #fff;
+  padding: 0.6in;
+  box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+  /* Header */
+  /* About Section */
+  /* Skills */
+  /* Experiences */
+  /* Education, Volunteer, & Language */
+  /* Projects */
+  /* Row & Column Helpers */
+}
+@media print {
+  .noman {
+    box-shadow: none;
+    padding: 0.25in;
+    padding-top: 0;
+  }
+  .noman p {
+    -moz-column-break-inside: avoid;
+         break-inside: avoid;
+  }
+}
+.noman__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing);
+  margin-bottom: var(--spacing);
+}
+.noman__header__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.noman__header__content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: var(--spacing-quarter);
+}
+.noman__header__content h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1;
+  color: #000;
+  margin-bottom: var(--spacing-half);
+}
+.noman__header__content__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  gap: var(--spacing-quarter);
+  margin-top: var(--spacing-quarter);
+}
+.noman__header__content__grid__item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-quarter);
+}
+.noman__header__content__grid__item__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+.noman__header__content__grid__item__icon img {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+.noman__header__content__grid__item__text {
+  font-size: 1rem;
+  line-height: 1;
+}
+.noman__about p {
+  color: #222;
+}
+.noman__skills__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-half);
+  margin-top: var(--spacing-quarter);
+}
+.noman__experiences__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing);
+  margin-top: var(--spacing-quarter);
+}
+.noman__experiences__grid__item {
+  display: block;
+  margin-bottom: var(--spacing-quarter);
+}
+.noman__experiences__grid__item h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-quarter);
+}
+.noman__experiences__grid__item h3 span {
+  font-size: 0.9rem;
+  color: #555;
+  font-weight: 400;
+}
+.noman__experiences__grid__item h4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: var(--spacing-quarter);
+}
+.noman__experiences__grid__item h4 span {
+  font-size: 0.9rem;
+  color: #555;
+  font-weight: 400;
+}
+.noman__experiences__grid__item h5 {
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1;
+  color: #555;
+  margin-bottom: var(--spacing-half);
+}
+.noman__experiences__grid__item h6 {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+  color: #000;
+  margin-bottom: var(--spacing-quarter);
+}
+.noman__education h3, .noman__volunteer h3, .noman__language h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-quarter);
+}
+.noman__education h4, .noman__volunteer h4, .noman__language h4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #222;
+  line-height: 1;
+  margin-bottom: var(--spacing-quarter);
+}
+.noman__education h4 span, .noman__volunteer h4 span, .noman__language h4 span {
+  font-size: 0.9rem;
+  color: #555;
+  font-weight: 400;
+}
+.noman__projects__item {
+  display: block;
+  margin-bottom: var(--spacing);
+}
+.noman__projects__item__title {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1;
+  color: #000;
+  margin-bottom: var(--spacing-quarter);
+}
+.noman__projects__item__organization {
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1;
+  color: #555;
+  margin-bottom: var(--spacing-quarter);
+}
+.noman__projects__item__description {
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #222;
+  margin-bottom: var(--spacing-quarter);
+}
+.noman__projects__item a {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid #0066ff;
+  border-radius: 0.25rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: center;
+  background-color: transparent;
+  color: #0066ff;
+}
+.noman__projects__item a:last-child {
+  margin-left: var(--spacing-quarter);
+  border-color: #000;
+  color: #000;
+}
+.noman__row {
+  display: flex;
+  gap: var(--spacing);
+}
+.noman__col {
+  flex: 1;
+}/*# sourceMappingURL=index.css.map */

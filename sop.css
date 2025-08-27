@@ -1,0 +1,126 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #000;
+  background-color: #fff;
+}
+
+:root {
+  --spacing: 2rem;
+  --spacing-half: 1.5rem;
+  --spacing-quarter: 0.7rem;
+  --spacing-small: 0.4rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 1;
+  font-weight: 600;
+  margin-bottom: var(--spacing-half);
+}
+
+h3 {
+  font-size: 1.2rem;
+  line-height: 1;
+  font-weight: 600;
+  margin-bottom: var(--spacing-quarter);
+}
+
+p {
+  line-height: 1.5;
+  font-weight: 500;
+}
+p:not(:last-child) {
+  margin-bottom: var(--spacing-quarter);
+}
+p.justify {
+  -webkit-hyphens: auto;
+          hyphens: auto;
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  text-align: justify;
+}
+
+section {
+  margin-bottom: var(--spacing-half);
+}
+
+ul {
+  list-style: outside square;
+  margin-left: 1rem;
+}
+ul:not(:last-child) {
+  padding-bottom: var(--spacing-quarter);
+}
+ul li {
+  color: #222;
+}
+ul li a {
+  color: #0066ff;
+}
+
+.noman {
+  display: block;
+  width: 25cm;
+  margin: 1rem auto;
+  box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+  background-color: white;
+  padding: 0.6in;
+}
+@media print {
+  .noman {
+    box-shadow: none;
+    padding: 0.25in;
+    padding-top: 0;
+  }
+  .noman p {
+    -moz-column-break-inside: avoid;
+         break-inside: avoid;
+  }
+}
+.noman__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--spacing);
+  gap: var(--spacing);
+}
+.noman__header__content {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 2.2in);
+  justify-content: center;
+}
+.noman__header__content h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-quarter);
+  line-height: 1;
+}
+.noman__header__content h2 {
+  font-size: 1.25rem;
+  line-height: 1;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: var(--spacing-half);
+}
+.noman__about p {
+  color: #222;
+}/*# sourceMappingURL=sop.css.map */

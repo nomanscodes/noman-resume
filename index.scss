@@ -1,0 +1,304 @@
+/* Base Reset & Global Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 1.3;
+  color: #000;
+  background-color: #fff;
+}
+
+:root {
+  --spacing: 1rem;
+  --spacing-half: 0.6rem;
+  --spacing-quarter: 0.4rem;
+  --spacing-small: 0.2rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  width: fit-content;
+}
+
+h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: var(--spacing-quarter);
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: var(--spacing-small);
+}
+
+p {
+  line-height: 1.3;
+  &:not(:last-child) {
+    margin-bottom: var(--spacing-small);
+  }
+  &.justify {
+    hyphens: auto;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    text-align: justify;
+  }
+}
+
+section {
+  margin-bottom: var(--spacing-quarter);
+}
+
+ul {
+  list-style: square outside;
+  margin-left: 0.8rem;
+  &:not(:last-child) {
+    padding-bottom: var(--spacing-small);
+  }
+  li {
+    color: #222;
+    a {
+      color: #0066ff;
+    }
+  }
+}
+
+/* Resume Layout */
+.noman {
+  display: block;
+  width: 25cm;
+  margin: 0.5rem auto;
+  background-color: #fff;
+  padding: 0.4in;
+  box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+
+  // Print styles
+  @media print {
+    box-shadow: none;
+    padding: 0.15in;
+    padding-top: 0;
+    margin: 0;
+    p {
+      break-inside: avoid;
+    }
+  }
+
+  /* Header */
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-quarter);
+    margin-bottom: var(--spacing-quarter);
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1;
+        margin-bottom: var(--spacing-small);
+      }
+      h2 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        line-height: 1;
+        color: #000;
+        margin-bottom: var(--spacing-quarter);
+      }
+      &__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto auto;
+        gap: var(--spacing-quarter);
+        margin-top: var(--spacing-quarter);
+        &__item {
+          display: flex;
+          align-items: center;
+          gap: var(--spacing-quarter);
+          &__icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 1.2rem;
+            height: 1.2rem;
+            img {
+              width: 1.2rem;
+              height: 1.2rem;
+            }
+          }
+          &__text {
+            font-size: 1rem;
+            line-height: 1;
+          }
+        }
+      }
+    }
+  }
+
+  /* About Section */
+  &__about {
+    p {
+      color: #222;
+    }
+  }
+
+  /* Skills */
+  &__skills {
+    &__grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--spacing-quarter);
+      margin-top: var(--spacing-quarter);
+    }
+  }
+
+  /* Experiences */
+  &__experiences {
+    &__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--spacing-quarter);
+      margin-top: var(--spacing-quarter);
+      &__item {
+        display: block;
+        margin-bottom: var(--spacing-small);
+        h3 {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: var(--spacing-quarter);
+          span {
+            font-size: 0.9rem;
+            color: #555;
+            font-weight: 400;
+          }
+        }
+        h4 {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 1rem;
+          font-weight: 500;
+          line-height: 1;
+          margin-bottom: var(--spacing-quarter);
+          span {
+            font-size: 0.9rem;
+            color: #555;
+            font-weight: 400;
+          }
+        }
+        h5 {
+          font-size: 0.9rem;
+          font-weight: 500;
+          line-height: 1;
+          color: #555;
+          margin-bottom: var(--spacing-quarter);
+        }
+        h6 {
+          font-size: 1rem;
+          font-weight: 600;
+          line-height: 1;
+          color: #000;
+          margin-bottom: var(--spacing-quarter);
+        }
+      }
+    }
+  }
+
+  /* Education, Volunteer, & Language */
+  &__education,
+  &__volunteer,
+  &__language {
+    h3 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: var(--spacing-quarter);
+    }
+    h4 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1rem;
+      font-weight: 500;
+      color: #222;
+      line-height: 1;
+      margin-bottom: var(--spacing-quarter);
+      span {
+        font-size: 0.9rem;
+        color: #555;
+        font-weight: 400;
+      }
+    }
+  }
+
+  /* Projects */
+  &__projects {
+    &__item {
+      display: block;
+      margin-bottom: var(--spacing);
+      &__title {
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 1;
+        color: #000;
+        margin-bottom: var(--spacing-quarter);
+      }
+      &__organization {
+        font-size: 0.9rem;
+        font-weight: 500;
+        line-height: 1;
+        color: #555;
+        margin-bottom: var(--spacing-quarter);
+      }
+      &__description {
+        font-size: 0.9rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #222;
+        margin-bottom: var(--spacing-quarter);
+      }
+      a {
+        display: inline-block;
+        padding: 5px 10px;
+        border: 1px solid #0066ff;
+        border-radius: 0.25rem;
+        font-size: 0.9rem;
+        font-weight: 500;
+        text-align: center;
+        background-color: transparent;
+        color: #0066ff;
+        &:last-child {
+          margin-left: var(--spacing-quarter);
+          border-color: #000;
+          color: #000;
+        }
+      }
+    }
+  }
+
+  /* Row & Column Helpers */
+  &__row {
+    display: flex;
+    gap: var(--spacing);
+  }
+
+  &__col {
+    flex: 1;
+  }
+}
