@@ -34,7 +34,9 @@ h2 {
   font-size: 1.3rem;
   font-weight: 700;
   line-height: 1;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.8rem;
+  border-bottom: 2px solid #000;
+  padding-bottom: 0.3rem;
 }
 
 h3 {
@@ -60,18 +62,20 @@ p.justify {
 }
 
 section {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.8rem;
 }
 
 ul {
   list-style: square outside;
-  margin-left: 0.8rem;
+  margin-left: 1.5rem;
 }
 ul:not(:last-child) {
   padding-bottom: 0.6rem;
 }
 ul li {
   color: #222;
+  line-height: 1.4;
+  margin-bottom: 0.3rem;
 }
 ul li a {
   color: #0066ff;
@@ -110,7 +114,7 @@ ul li a {
   justify-content: space-between;
   align-items: center;
   gap: var(--spacing-quarter);
-  margin-bottom: 1.3rem;
+  margin-bottom: 1.8rem;
 }
 .noman__header__content {
   display: flex;
@@ -166,8 +170,8 @@ ul li a {
 .noman__skills__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-  margin-top: 0.6rem;
+  gap: 1.5rem;
+  margin-top: 0.8rem;
 }
 .noman__experiences__grid {
   display: grid;
@@ -177,7 +181,7 @@ ul li a {
 }
 .noman__experiences__grid__item {
   display: block;
-  margin-bottom: 0.6rem;
+  margin-bottom: 1.2rem;
 }
 .noman__experiences__grid__item h3 {
   display: flex;
@@ -209,7 +213,7 @@ ul li a {
   font-weight: 500;
   line-height: 1;
   color: #555;
-  margin-bottom: 0.7rem;
+  margin-bottom: 0.9rem;
 }
 .noman__experiences__grid__item h6 {
   font-size: 1rem;
